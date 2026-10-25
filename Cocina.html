@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Tienda online de muebles modernos y elegantes" />
+    <meta name="author" content="" />
+    <title>Muebles con Estilo - Cocina</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Iconos de Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Tema CSS principal (incluye Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <style>
+        .product-card:hover {
+            transform: translateY(-5px);
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navegación-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container px-4 px-lg-5">
+            <!--<a class="navbar-brand fw-bold" href="#!">-->
+            <i class="bi bi-house-door-fill me-2"></i>Muebles con Estilo
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Alternar navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page"
+                            href="index.html">Inicio</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="Categoria.html" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Categorías</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="Salon.html">Salón</a></li>
+                            <li><a class="dropdown-item" href="Dormitorio.html">Dormitorio</a></li>
+                            <li><a class="dropdown-item" href="Cocina.html">Cocina</a></li>
+                            <li><a class="dropdown-item" href="Oficina.html">Oficina</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="Ofertas.html">Ofertas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Contacto.html">Contacto</a></li>
+                </ul>
+                <form class="d-flex" action="carrito.html" method="get">
+                    <button class="btn btn-outline-dark" type="submit">
+                        <i class="bi-cart-fill me-1"></i>
+                        Carrito
+                        <span class="badge bg-dark text-white ms-1 rounded-pill" id="cart-count">0</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Encabezado-->
+    <header class="bg-dark py-5"
+        style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1618220179428-22790b461013?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center;">
+        <div class="container px-4 px-lg-5 my-5">
+            <div class="text-center text-white">
+                <h1 class="display-4 fw-bolder">Muebles que inspiran</h1>
+                <p class="lead fw-normal text-white-50 mb-0">Diseño moderno y calidad para tu hogar</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sección de productos -->
+    <section class="py-5">
+        <div class="container px-4 px-lg-5 mt-5">
+            <h2 class="text-center mb-5">Muebles de Cocina</h2>
+            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+
+                <!-- Producto 1 - Cocina completa Mango Tarraco -->
+                <div class="col mb-5">
+                    <div class="card h-100 product-card">
+                        <img class="card-img-top"
+                            src="assets\cocina-completa-tarraco.webp"
+                            alt="Cocina Tarraco" />
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">Cocina Completa Modelo Tarraco</h5>
+                                <p class="text-muted small">Tablero laminado - Color gris mate</p>
+                                1899,99 €
+                            </div>
+                        </div>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center">
+                                <button class="btn btn-outline-dark mt-auto w-100"
+                                    onclick="addToCart('Cocina Tarraco', 1899.99, 'assets\cocina-completa-tarraco.webp')">
+                                    <i class="bi bi-cart-plus me-2"></i>Añadir
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 2 - Mueble microondas -->
+                <div class="col mb-5">
+                    <div class="card h-100 product-card">
+
+                        <img class="card-img-top" src="assets\mueble-alto-microondas.jpg" alt="Mueble aux" />
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">Mueble auxiliar de cocina para microondas</h5>
+                                <p class="text-muted small">Cajón y puerta de 120 cm</p>
+                                309,99 €
+                            </div>
+                        </div>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center">
+                                <button class="btn btn-outline-dark mt-auto w-100"
+                                    onclick="addToCart('Mueble Microondas', 309.99, 'assets/mueble-alto-microondas.jpg')">
+                                    <i class="bi bi-cart-plus me-2"></i>Añadir
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 3 - Cocina Completa Livia Trend -->
+                <div class="col mb-5">
+                    <div class="card h-100 product-card">
+                        <img class="card-img-top"
+                            src="assets\conjunto-muebles-de-cocina-livia-trend-line-blanco-madera-210-cm.jpg"
+                            alt="Cocina Livi Trend" />
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">Cocina completa de 210 cm</h5>
+                                <p class="text-muted small">Color Blanco Lacado en Brillo - Madera</p>
+                                2499,99 €
+                            </div>
+                        </div>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center">
+                                <button class="btn btn-outline-dark mt-auto w-100"
+                                    onclick="addToCart('Cocina Completa de 210 cm', 2499.99, 'assets/conjunto-muebles-de-cocina-livia-trend-line-blanco-madera-210-cm.jpg')">
+                                    <i class="bi bi-cart-plus me-2"></i>Añadir
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 4 - Mesa de Cocina Extensible -->
+                <div class="col mb-5">
+                    <div class="card h-100 product-card">
+                        <img class="card-img-top" src="assets\MESA-LUA-4.jpg" alt="Mesa de cocina" />
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">Mesa de Cocina Extensible</h5>
+                                <p class="text-muted small">Laminado en Roble y Negro</p>
+                                357,99 €
+                            </div>
+                        </div>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center">
+                                <button class="btn btn-outline-dark mt-auto w-100"
+                                    onclick="addToCart('Mesa de Cocina Extensible', 357.99, 'assets/MESA-LUA-4.jpg')">
+                                    <i class="bi bi-cart-plus me-2"></i>Añadir
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 5 - Mesa de cocina -->
+                <div class="col mb-5">
+                    <div class="card h-100 product-card">
+                        <img class="card-img-top" src="assets\Mesa-de-Cocina-.jpg" alt="Mesa cocina pequeña" />
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">Conjunto mesa de cocina</h5>
+                                <p class="text-muted small">Mesa de cocina con 2 Taburetes Tapizados</p>
+                                499,99 €
+                            </div>
+                        </div>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center">
+                                <button class="btn btn-outline-dark mt-auto w-100"
+                                    onclick="addToCart('Conjunto mesa de cocina', 499.99, 'assets/Mesa-de-Cocina-.jpg')">
+                                    <i class="bi bi-cart-plus me-2"></i>Añadir
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 6 - Fregadero -->
+                <div class="col mb-5">
+                    <div class="card h-100 product-card">
+                        <img class="card-img-top" src="assets\fregadero.webp" alt="Fregadero" />
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">Fregadero inteligente</h5>
+                                <p class="text-muted small">Fregadero de cocina de acero inoxidable integrado con lluvia
+                                    inteligente Pantalla digital Grifo (75×46×22cm) </p>
+                                719,99 €
+                            </div>
+                        </div>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center">
+                                <button class="btn btn-outline-dark mt-auto w-100"
+                                    onclick="addToCart('Fregadero inteligente', 719.99, 'assets/fregadero.webp')">
+                                    <i class="bi bi-cart-plus me-2"></i>Añadir
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 7 - Carrito de cocina -->
+                <div class="col mb-5">
+                    <div class="card h-100 product-card">
+                        <div class="badge bg-success text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
+                            Nuevo
+                        </div>
+                        <img class="card-img-top" src="assets\carrito.webp" alt="Carrito de cocina" />
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">Carrito de Servicio con ruedas de 4 niveles</h5>
+                                <p class="text-muted small">carrito de almacenamiento de cocina con 4 ruedas
+                                    silenciosas, estación de carga y asa. </p>
+                                63,99 €
+                            </div>
+                        </div>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center">
+                                <button class="btn btn-outline-dark mt-auto w-100"
+                                    onclick="addToCart('Carrito de servicio', 63.99, 'assets/carrito.webp')">
+                                    <i class="bi bi-cart-plus me-2"></i>Añadir
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 8 - Taburetes -->
+                <div class="col mb-5">
+                    <div class="card h-100 product-card">
+                        <img class="card-img-top" src="assets\taburetes.webp" alt="Taburetes de Cocina" />
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">Juego de 2 Taburetes de Bar para Cocina</h5>
+                                <p class="text-muted small">Silla Alta, Cómoda y Acolchada. (Blanco) </p>
+                                79,90 €
+                            </div>
+                        </div>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center">
+                                <button class="btn btn-outline-dark mt-auto w-100"
+                                    onclick="addToCart('Taburetes de Bar para Cocina', 79.90, 'assets/taburetes.webp')">
+                                    <i class="bi bi-cart-plus me-2"></i>Añadir
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </section>
+    <!-- Pie de página-->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5 class="text-white mb-3">Muebles con Estilo</h5>
+                    <p class="text-white-50 small">Tu tienda online de muebles modernos y de calidad para todos los
+                        espacios de tu hogar.</p>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5 class="text-white mb-3">Enlaces rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#!" class="text-white-50 text-decoration-none">Sobre nosotros</a></li>
+                        <li><a href="#!" class="text-white-50 text-decoration-none">Política de envíos</a></li>
+                        <li><a href="#!" class="text-white-50 text-decoration-none">Devoluciones</a></li>
+                        <li><a href="#!" class="text-white-50 text-decoration-none">Preguntas frecuentes</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="text-white mb-3">Síguenos</h5>
+                    <div class="d-flex gap-3">
+                        <a href="#!" class="text-white-50"><i class="bi bi-facebook fs-4"></i></a>
+                        <a href="#!" class="text-white-50"><i class="bi bi-instagram fs-4"></i></a>
+                        <a href="#!" class="text-white-50"><i class="bi bi-twitter fs-4"></i></a>
+                        <a href="#!" class="text-white-50"><i class="bi bi-pinterest fs-4"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-white">
+            <p class="m-0 text-center text-white-50">Copyright &copy; Muebles con Estilo 2024. Todos los derechos
+                reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Tema JS principal -->
+    <script src="js/scripts.js"></script>
+</body>
+<script>
+    // Función para añadir productos al carrito
+    function addToCart(nombre, precio, imagen, descripcion = '') {
+        let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+        const existingItem = carrito.find(item => item.nombre === nombre);
+
+        if (existingItem) {
+            existingItem.cantidad += 1;
+        } else {
+            carrito.push({
+                nombre: nombre,
+                precio: precio,
+                imagen: imagen,
+                descripcion: descripcion,
+                cantidad: 1
+            });
+        }
+
+        localStorage.setItem('carrito', JSON.stringify(carrito));
+        actualizarContadorGlobal();
+
+        // Notificación elegante
+        const toast = document.createElement('div');
+        toast.className = 'position-fixed bottom-0 end-0 p-3';
+        toast.style.zIndex = '9999';
+        toast.innerHTML = `
+            <div class="toast show align-items-center text-white bg-success border-0" role="alert">
+                <div class="d-flex">
+                    <div class="toast-body">
+                        ✅ ${nombre} añadido al carrito
+                    </div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+                </div>
+            </div>
+        `;
+        document.body.appendChild(toast);
+        setTimeout(() => toast.remove(), 3000);
+    }
+
+    // Función para actualizar el contador del carrito
+    function actualizarContadorGlobal() {
+        const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+        const total = carrito.reduce((sum, item) => sum + item.cantidad, 0);
+        const contadores = document.querySelectorAll('#cart-count');
+        contadores.forEach(el => {
+            el.textContent = total;
+        });
+    }
+
+    // Inicializar contador al cargar la página
+    document.addEventListener('DOMContentLoaded', function () {
+        actualizarContadorGlobal();
+
+        // Verificar que el localStorage funciona
+        console.log('Carrito iniciado correctamente');
+    });
+
+    // Función de depuración para ver el contenido del carrito (opcional)
+    function verCarrito() {
+        const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+        console.log('Contenido del carrito:', carrito);
+        alert('El carrito tiene ' + carrito.reduce((sum, item) => sum + item.cantidad, 0) + ' productos');
+    }
+</script>
+// Notificación elegante
+const toast = document.createElement('div');
+toast.className = 'position-fixed bottom-0 end-0 p-3';
+toast.style.zIndex = '9999';
+toast.innerHTML = `
+<div class="toast show align-items-center text-white bg-success border-0" role="alert">
+    <div class="d-flex">
+        <div class="toast-body">
+            ✅ ${nombre} añadido al carrito
+        </div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+    </div>
+
+</html>

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Tienda online de muebles modernos y elegantes" />
+    <meta name="author" content="" />
+    <title>Muebles con Estilo - Ofertas</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Iconos de Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Tema CSS principal (incluye Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <style>
+        .product-card:hover {
+            transform: translateY(-5px);
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navegación-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container px-4 px-lg-5">
+            <!--<a class="navbar-brand fw-bold" href="#!">-->
+            <i class="bi bi-house-door-fill me-2"></i>Muebles con Estilo
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Alternar navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page"
+                            href="index.html">Inicio</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="Categoria.html" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Categorías</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="Salon.html">Salón</a></li>
+                            <li><a class="dropdown-item" href="Dormitorio.html">Dormitorio</a></li>
+                            <li><a class="dropdown-item" href="Cocina.html">Cocina</a></li>
+                            <li><a class="dropdown-item" href="Oficina.html">Oficina</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="Ofertas.html">Ofertas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Contacto.html">Contacto</a></li>
+                </ul>
+                <form class="d-flex" action="carrito.html" method="get">
+                    <button class="btn btn-outline-dark" type="submit">
+                        <i class="bi-cart-fill me-1"></i>
+                        Carrito
+                        <span class="badge bg-dark text-white ms-1 rounded-pill" id="cart-count">0</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Encabezado-->
+    <header class="bg-dark py-5"
+        style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1618220179428-22790b461013?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center;">
+        <div class="container px-4 px-lg-5 my-5">
+            <div class="text-center text-white">
+                <h1 class="display-4 fw-bolder">Muebles que inspiran</h1>
+                <p class="lead fw-normal text-white-50 mb-0">Diseño moderno y calidad para tu hogar</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sección de productos -->
+    <section class="py-5">
+        <div class="container px-4 px-lg-5 mt-5">
+            <h2 class="text-center mb-5">Artículos en Oferta</h2>
+            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+
+                <!-- Producto 1 - Sofá Cama OFERTA -->
+                <div class="col mb-5">
+                    <div class="card h-100 product-card">
+                        <div class="badge bg-danger text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
+                            -10%
+                        </div>
+                        <img class="card-img-top" src="assets\sofa-cama.webp" alt="Sofá Cama" />
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">Sofá Cama SP6599</h5>
+                                <p class="text-muted small">225x90cm - Tela - Gris</p>
+                                <span class="text-muted text-decoration-line-through">427,90 €</span>
+                                389,00 €
+                            </div>
+                        </div>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center">
+                                <button class="btn btn-outline-dark mt-auto w-100"
+                                    onclick="addToCart('Sofá Cama SP6599', 389.00, 'assets/sofa-cama.webp')">
+                                    <i class="bi bi-cart-plus me-2"></i>Añadir
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Producto 2 - Sillón reclinable -->
+                <div class="col mb-5">
+                    <div class="card h-100 product-card">
+                        <div class="badge bg-danger text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
+                            -15%
+                        </div>
+                        <img class="card-img-top" src="assets\sillon-reclinable.webp" alt="Sillon reclinable" />
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">Sillon reclinable SP5860</h5>
+                                <p class="text-muted small">85x83cm - Piel marrón</p>
+                                <span class="text-muted text-decoration-line-through">235,75 €</span>
+                                205,00 €
+                            </div>
+                        </div>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center">
+                                <button class="btn btn-outline-dark mt-auto w-100"
+                                    onclick="addToCart('Sillon reclinable SP5860', 205.00, 'assets/sillon-reclinable.webp')">
+                                    <i class="bi bi-cart-plus me-2"></i>Añadir
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 3 - Conjunto de salon -->
+                <div class="col mb-5">
+                    <div class="card h-100 product-card">
+                        <div class="badge bg-danger text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
+                            -25%
+                        </div>
+                        <img class="card-img-top" src="assets\conjunto-de-salon.webp" alt="Conjunto de salon 1" />
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">Conjunto de salón SP6498</h5>
+                                <p class="text-muted small">Iluminación LED - Negro</p>
+                                <span class="text-muted text-decoration-line-through">598,75 €</span>
+                                479,00 €
+                            </div>
+                        </div>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center">
+                                <button class="btn btn-outline-dark mt-auto w-100"
+                                    onclick="addToCart('Conjunto de salón SP6498', 479.00, 'assets/conjunto-de-salon.webp')">
+                                    <i class="bi bi-cart-plus me-2"></i>Añadir
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 4 - Cómoda blanca -->
+                <div class="col mb-5">
+                    <div class="card h-100 product-card">
+                        <div class="badge bg-danger text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
+                            -28%
+                        </div>
+                        <img class="card-img-top" src="assets\ID-0102_mini.jpg" alt="Cómoda blanca" />
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">Cómoda blanca de madera</h5>
+                                <p class="text-muted small">Tallada - Madera maciza </p>
+                                <span class="text-muted text-decoration-line-through">668,00 €</span>
+                                479,00 €
+                            </div>
+                        </div>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center">
+                                <button class="btn btn-outline-dark mt-auto w-100"
+                                    onclick="addToCart('Cómoda blanca de madera', 479.00, 'assets/ID-0102_mini.jpg')">
+                                    <i class="bi bi-cart-plus me-2"></i>Añadir
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 5 - Sinfonier macizo blanco -->
+                <div class="col mb-5">
+                    <div class="card h-100 product-card">
+                        <div class="badge bg-danger text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
+                            -40%
+                        </div>
+                        <img class="card-img-top" src="assets\sinfonier.jpg" alt="Sinfonier blanco" />
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">Sinfonier de madera maziza</h5>
+                                <p class="text-muted small">Color blanco - Madera maciza de araucaria</p>
+                                <span class="text-muted text-decoration-line-through">529,00 €</span>
+                                317,00 €
+                            </div>
+                        </div>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center">
+                                <button class="btn btn-outline-dark mt-auto w-100"
+                                    onclick="addToCart('Sinfonier de madera maziza', 317.00, 'assets/sinfonier.jpg')">
+                                    <i class="bi bi-cart-plus me-2"></i>Añadir
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 6 - Mesa de comedor OFERTA -->
+                <div class="col mb-5">
+                    <div class="card h-100 product-card">
+                        <div class="badge bg-danger text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
+                            -20%
+                        </div>
+                        <img class="card-img-top" src="assets\IR-0103HB_mini.jpg" alt="Mesa de comedor de madera" />
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">Mesa de Comedor Araucaria</h5>
+                                <p class="text-muted small">Madera maciza - Estructura metálica</p>
+                                <span class="text-muted text-decoration-line-through">849,00 €</span>
+                                679,00 €
+                            </div>
+                        </div>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center">
+                                <button class="btn btn-outline-dark mt-auto w-100"
+                                    onclick="addToCart('Mesa de Comedor Araucaria', 679.00, 'assets/IR-0103HB_mini.jpg')">
+                                    <i class="bi bi-cart-plus me-2"></i>Añadir
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 7 - Vitrina en oferta -->
+                <div class="col mb-5">
+                    <div class="card h-100 product-card">
+                        <div class="badge bg-danger text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
+                            -20%
+                        </div>
+                        <img class="card-img-top" src="assets\MG-0074TK-2_vitrina-mini.jpg" alt="Vitrina de madera" />
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">Vitrina de madera maciza</h5>
+                                <p class="text-muted small">Color Teca - Madera maciza de mindi</p>
+                                <span class="text-muted text-decoration-line-through">1079,00 €</span>
+                                865,00 €
+                            </div>
+                        </div>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center">
+                                <button class="btn btn-outline-dark mt-auto w-100"
+                                    onclick="addToCart('Vitrina de madera maciza', 865.00, 'assets/MG-0074TK-2_vitrina-mini.jpg')">
+                                    <i class="bi bi-cart-plus me-2"></i>Añadir
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 8 - Butaca de lectura -->
+                <div class="col mb-5">
+                    <div class="card h-100 product-card">
+                        <div class="badge bg-danger text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
+                            -30%
+                        </div>
+                        <img class="card-img-top" src="assets\butaca-lectura-JK-0102BE_mini.jpg"
+                            alt="Butaca de lectura beige" />
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">Butaca de lectura Beige</h5>
+                                <p class="text-muted small">Varios Acabados</p>
+                                <span class="text-muted text-decoration-line-through">239,00 €</span>
+                                167,00 €
+                            </div>
+                        </div>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center">
+                                <button class="btn btn-outline-dark mt-auto w-100"
+                                    onclick="addToCart('Butaca de lectura Beige', 167.00, 'assets/butaca-lectura-JK-0102BE_mini.jpg')">
+                                    <i class="bi bi-cart-plus me-2"></i>Añadir
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </section>
+    <!-- Pie de página-->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5 class="text-white mb-3">Muebles con Estilo</h5>
+                    <p class="text-white-50 small">Tu tienda online de muebles modernos y de calidad para todos los
+                        espacios de tu hogar.</p>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5 class="text-white mb-3">Enlaces rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#!" class="text-white-50 text-decoration-none">Sobre nosotros</a></li>
+                        <li><a href="#!" class="text-white-50 text-decoration-none">Política de envíos</a></li>
+                        <li><a href="#!" class="text-white-50 text-decoration-none">Devoluciones</a></li>
+                        <li><a href="#!" class="text-white-50 text-decoration-none">Preguntas frecuentes</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="text-white mb-3">Síguenos</h5>
+                    <div class="d-flex gap-3">
+                        <a href="#!" class="text-white-50"><i class="bi bi-facebook fs-4"></i></a>
+                        <a href="#!" class="text-white-50"><i class="bi bi-instagram fs-4"></i></a>
+                        <a href="#!" class="text-white-50"><i class="bi bi-twitter fs-4"></i></a>
+                        <a href="#!" class="text-white-50"><i class="bi bi-pinterest fs-4"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-white">
+            <p class="m-0 text-center text-white-50">Copyright &copy; Muebles con Estilo 2024. Todos los derechos
+                reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Tema JS principal -->
+    <script src="js/scripts.js"></script>
+</body>
+<script>
+    // Función para añadir productos al carrito
+    function addToCart(nombre, precio, imagen, descripcion = '') {
+        let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+        const existingItem = carrito.find(item => item.nombre === nombre);
+
+        if (existingItem) {
+            existingItem.cantidad += 1;
+        } else {
+            carrito.push({
+                nombre: nombre,
+                precio: precio,
+                imagen: imagen,
+                descripcion: descripcion,
+                cantidad: 1
+            });
+        }
+
+        localStorage.setItem('carrito', JSON.stringify(carrito));
+        actualizarContadorGlobal();
+
+        // Notificación elegante
+        const toast = document.createElement('div');
+        toast.className = 'position-fixed bottom-0 end-0 p-3';
+        toast.style.zIndex = '9999';
+        toast.innerHTML = `
+            <div class="toast show align-items-center text-white bg-success border-0" role="alert">
+                <div class="d-flex">
+                    <div class="toast-body">
+                        ✅ ${nombre} añadido al carrito
+                    </div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+                </div>
+            </div>
+        `;
+        document.body.appendChild(toast);
+        setTimeout(() => toast.remove(), 3000);
+    }
+
+    // Función para actualizar el contador del carrito
+    function actualizarContadorGlobal() {
+        const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+        const total = carrito.reduce((sum, item) => sum + item.cantidad, 0);
+        const contadores = document.querySelectorAll('#cart-count');
+        contadores.forEach(el => {
+            el.textContent = total;
+        });
+    }
+
+    // Inicializar contador al cargar la página
+    document.addEventListener('DOMContentLoaded', function () {
+        actualizarContadorGlobal();
+
+        // Verificar que el localStorage funciona
+        console.log('Carrito iniciado correctamente');
+    });
+
+    // Función de depuración para ver el contenido del carrito (opcional)
+    function verCarrito() {
+        const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+        console.log('Contenido del carrito:', carrito);
+        alert('El carrito tiene ' + carrito.reduce((sum, item) => sum + item.cantidad, 0) + ' productos');
+    }
+</script>
+// Notificación elegante
+const toast = document.createElement('div');
+toast.className = 'position-fixed bottom-0 end-0 p-3';
+toast.style.zIndex = '9999';
+toast.innerHTML = `
+<div class="toast show align-items-center text-white bg-success border-0" role="alert">
+    <div class="d-flex">
+        <div class="toast-body">
+            ✅ ${nombre} añadido al carrito
+        </div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+    </div>
+
+</html>

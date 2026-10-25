@@ -1,0 +1,61 @@
+{
+    "moneda": "€",
+    "productos": [
+        {
+            "imagen": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=450&q=80",
+            "nombre": "Sofá Moderno Nórdico",
+            "precio": 899.99,
+            "idProducto": 1,
+            "descripcion": "Tela gris - Patas de madera"
+        },
+        {
+            "imagen": "https://images.unsplash.com/photo-1615066390971-03e4e1c36ddf?auto=format&fit=crop&w=450&q=80",
+            "nombre": "Mesa de Comedor Roble",
+            "precio": 509.99,
+            "idProducto": 2,
+            "descripcion": "160x90cm - Madera maciza"
+        },
+        {
+            "imagen": "https://images.unsplash.com/photo-1580480055273-228ff5388ef8?auto=format&fit=crop&w=450&q=80",
+            "nombre": "Silla Ergonómica",
+            "precio": 249.99,
+            "idProducto": 3,
+            "descripcion": "Tapizado beige"
+        },
+        {
+            "imagen": "assets/multiusos.jpg",
+            "nombre": "Estantería Multiusos",
+            "precio": 179.99,
+            "idProducto": 4,
+            "descripcion": "5 estantes - Pino natural"
+        },
+        {
+            "imagen": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=450&q=80",
+            "nombre": "Cama Matrimonial",
+            "precio": 599.99,
+            "idProducto": 5,
+            "descripcion": "150x190cm - Incluye cabecero"
+        },
+        {
+            "imagen": "https://images.unsplash.com/photo-1533090481720-856c6e3c1fdc?auto=format&fit=crop&w=450&q=80",
+            "nombre": "Mesa de Centro",
+            "precio": 189.99,
+            "idProducto": 6,
+            "descripcion": "Cristal templado y acero"
+        },
+        {
+            "imagen": "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=450&q=80",
+            "nombre": "Lámpara de Pie",
+            "precio": 129.99,
+            "idProducto": 7,
+            "descripcion": "Diseño minimalista - LED"
+        },
+        {
+            "imagen": "assets/armario-ropero-con-3-puertas-3-cajones-5-baldas-barra-turin-pitarch.jpg",
+            "nombre": "Armario Ropero",
+            "precio": 449.99,
+            "idProducto": 8,
+            "descripcion": "3 puertas - Blanco/Roble"
+        }
+    ]
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Tienda online de muebles modernos y elegantes" />
+    <meta name="author" content="" />
+    <title>Muebles con Estilo - Tienda Online</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Iconos de Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Tema CSS principal (incluye Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <!-- Animate.css para animaciones extras -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <style>
+        /* ===== ESTILOS PERSONALIZADOS ===== */
+        /* Ajuste para navbar fijo */
+        body {
+            padding-top: 76px;
+            /* Altura del navbar fijo */
+            padding-left: 400px;
+            /* Separación lateral */
+            padding-right: 400px;
+            /* Separación lateral */
+
+        }
+
+        .contenedor-legal {
+            border-color: black;
+            border-style: solid;
+            border-width: 1px;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navegación con fixed-top -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand fw-bold" href="Tiendaconestilo.html">
+                <i class="bi bi-house-door-fill me-2"></i>Muebles con Estilo
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Alternar navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page"
+                            href="Tiendaconestilo.html">Inicio</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Categorías</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="Salon.html">Salón</a></li>
+                            <li><a class="dropdown-item" href="Dormitorio.html">Dormitorio</a></li>
+                            <li><a class="dropdown-item" href="Cocina.html">Cocina</a></li>
+                            <li><a class="dropdown-item" href="Oficina.html">Oficina</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="Ofertas.html">Ofertas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Contacto.html">Contacto</a></li>
+                </ul>
+                <form class="d-flex" action="carrito.html" method="get">
+                    <button class="btn btn-outline-dark" type="submit">
+                        <i class="bi-cart-fill me-1"></i>
+                        Carrito
+                        <span class="badge bg-dark text-white ms-1 rounded-pill" id="cart-count">0</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <section id='AvisoLegal' class="legal-section">
+        <header class="bg-dark py-5"
+            style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1618220179428-22790b461013?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center;">
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="text-center text-white">
+                    <h1 class="display-4 fw-bolder">Aviso Legal</h1>
+                </div>
+            </div>
+        </header>
+
+        <body>
+            <div class="contenedor-legal">
+                <p><strong>1. DATOS IDENTIFICATIVOS</strong></p>
+                <p>En cumplimiento con el deber de información recogido en el artículo 10 de la Ley 34/2002, de 11 de
+                    julio, de Servicios de la Sociedad de la Información y del Comercio Electrónico, a continuación se
+                    reflejan los siguientes datos:
+
+                    Titular de la web: Mikel Darwin Sergio
+                    Nombre comercial: Muebles con Estilo
+                    NIF/CIF: 35416541651685165165Y
+                    Domicilio social: Calle Bravo Murillo, 25 - Madrid
+                    Correo electrónico de contacto: info@mueblesconestilo.com
+                    Teléfono: +34 912 345 678</p>
+                <p><strong>2. USUARIOS</strong></p>
+                <p>El acceso y/o uso de este portal de Muebles con Estilo atribuye la condición de USUARIO, que acepta,
+                    desde dicho acceso y/o uso, las Condiciones Generales de Uso aquí reflejadas.</p>
+                <p><strong>3. USO DEL PORTAL</strong></p>
+                <p>mueblesconestilo.com (o tu dominio correspondiente) proporciona el acceso a multitud de
+                    informaciones, servicios o datos (en adelante, "los contenidos") en Internet pertenecientes a
+                    Muebles con Estilo. El USUARIO asume la responsabilidad del uso del portal. Dicha responsabilidad se
+                    extiende al registro que fuese necesario para acceder a determinados servicios o contenidos (por
+                    ejemplo, el proceso de compra de muebles).mueblesconestilo.com (o tu dominio correspondiente)
+                    proporciona el acceso a multitud de informaciones, servicios o datos (en adelante, "los contenidos")
+                    en Internet pertenecientes a Muebles con Estilo. El USUARIO asume la responsabilidad del uso del
+                    portal. Dicha responsabilidad se extiende al registro que fuese necesario para acceder a
+                    determinados servicios o contenidos (por ejemplo, el proceso de compra de muebles).</p>
+                <p><strong>4. PROPIEDAD INTELECTUAL E INDUSTRIAL</strong></p>
+                <p>Muebles con Estilo por sí o como cesionaria, es titular de todos los derechos de propiedad
+                    intelectual e industrial de su página web, así como de los elementos contenidos en la misma (a
+                    título enunciativo: imágenes de mobiliario, diseños, catálogos, fotografías de ambientes, software,
+                    marcas o logotipos, etc.).
+                    Queda expresamente prohibida la reproducción, distribución y comunicación pública de la totalidad o
+                    parte de los contenidos de esta página web con fines comerciales, en cualquier soporte y por
+                    cualquier medio técnico, sin la autorización de Muebles con Estilo.</p>
+                <p><strong>5. EXCLUSIÓN DE RESPONSABILIDAD</strong></p>
+                <p>Muebles con Estilo no se hace responsable, en ningún caso, de los daños y perjuicios de cualquier
+                    naturaleza que pudieran ocasionar, a título enunciativo: errores u omisiones en los contenidos,
+                    falta de disponibilidad del portal o la transmisión de virus o programas maliciosos, a pesar de
+                    haber adoptado todas las medidas tecnológicas necesarias para evitarlo.
+                    Asimismo, las tonalidades de los colores o texturas de los muebles mostrados en pantalla pueden
+                    variar ligeramente del producto real debido a la configuración del monitor del usuario</p>
+                <p><strong>6. PROTECCIÓN DE DATOS</strong></p>
+                <p>Todo lo relativo a la política de protección de datos se encuentra recogido en nuestro documento de
+                    Política de Privacidad.</p>
+                <p><strong>7. LEGISLACIÓN APLICABLE Y JURISDICCIÓN</strong></p>
+                <p>La relación entre Muebles con Estilo y el USUARIO se regirá por la normativa española vigente y
+                    cualquier controversia se someterá a los Juzgados y tribunales de la ciudad de Madrid, salvo
+                    que la ley disponga lo contrario por tratarse de un consumidor final.</p>
+            </div>
+        </body>
+</section>
+</body>
+</html>

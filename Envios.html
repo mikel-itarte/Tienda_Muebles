@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Tienda online de muebles modernos y elegantes" />
+    <meta name="author" content="" />
+    <title>Muebles con Estilo - Tienda Online</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Iconos de Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Tema CSS principal (incluye Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <!-- Animate.css para animaciones extras -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <style>
+        /* ===== ESTILOS PERSONALIZADOS ===== */
+        /* Ajuste para navbar fijo */
+        body {
+            padding-top: 76px;
+            /* Altura del navbar fijo */
+            padding-left: 400px;
+            /* Separación lateral */
+            padding-right: 400px;
+            /* Separación lateral */
+
+        }
+
+        .contenedor-envios {
+            border-color: black;
+            border-style: solid;
+            border-width: 1px;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navegación con fixed-top -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand fw-bold" href="Tiendaconestilo.html">
+                <i class="bi bi-house-door-fill me-2"></i>Muebles con Estilo
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Alternar navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page"
+                            href="Tiendaconestilo.html">Inicio</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Categorías</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="Salon.html">Salón</a></li>
+                            <li><a class="dropdown-item" href="Dormitorio.html">Dormitorio</a></li>
+                            <li><a class="dropdown-item" href="Cocina.html">Cocina</a></li>
+                            <li><a class="dropdown-item" href="Oficina.html">Oficina</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="Ofertas.html">Ofertas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Contacto.html">Contacto</a></li>
+                </ul>
+                <form class="d-flex" action="carrito.html" method="get">
+                    <button class="btn btn-outline-dark" type="submit">
+                        <i class="bi-cart-fill me-1"></i>
+                        Carrito
+                        <span class="badge bg-dark text-white ms-1 rounded-pill" id="cart-count">0</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <section id='Preguntas' class="preguntas-section">
+        <header class="bg-dark py-5"
+            style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1618220179428-22790b461013?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center;">
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="text-center text-white">
+                    <h1 class="display-4 fw-bolder">Política de envíos</h1>
+                </div>
+            </div>
+        </header>
+
+        <body>
+            <div class="contenedor-envios">
+                <p><strong>1. ZONAS DE ENVÍO</strong></p>
+                <p>Realizamos envíos a toda la Península y Baleares. Por el momento, no realizamos envíos automáticos a
+                    Canarias, Ceuta y Melilla; si resides allí, contacta con nosotros para un presupuesto
+                    personalizadoRealizamos envíos a toda la Península y Baleares. Por el momento, no realizamos envíos
+                    automáticos a Canarias, Ceuta y Melilla; si resides allí, contacta con nosotros para un presupuesto
+                    personalizado</p>
+                <p><strong>2. PLAZOS DE ENTREGA</strong></p>
+                <p> -Productos en Stock: Entre [3 y 7] días hábiles.<br>
+                    -Muebles bajo pedido/Personalizados: El plazo estimado es de [4 a 6] semanas, dependiendo del
+                    fabricante y el proceso de tapizado o barnizado.<br>
+                    -Los plazos cuentan a partir de la confirmación del pago.</p>
+                <p><strong>3. MODALIDADES DE ENTREGA</strong></p>
+                <p>Ofrecemos dos tipos de servicio para adaptarnos a tus necesidades:<br>
+
+                    -Envío Estándar (Económico): La entrega se realiza a pie de calle. El transportista no subirá el
+                    mueble al domicilio ni entrará en el edificio. Ideal para muebles pequeños o si cuentas con ayuda
+                    para subirlo.<br>
+                    -Envío Premium (Guante Blanco): Incluye la subida al domicilio, desembalaje y colocación en la
+                    estancia deseada. Este servicio tiene un coste adicional que se calculará al finalizar tu compra.
+                </p>
+                <p><strong>4. GASTOS DE ENVÍO</strong></p>
+                <p> -Envío gratuito en pedidos superiores a 1000 € (válido para Envío Estándar en Península).<br>
+                    -Para pedidos inferiores, el coste se calcula según el peso y volumen del mueble, mostrándose de
+                    forma transparente en el carrito de compra.</p>
+                <p><strong>5. RESPONSABILIDAD DEL CLIENTE (Accesos)</strong></p>
+                <p>Es responsabilidad del cliente asegurar que el mueble cabe por los accesos de la vivienda (puertas,
+                    pasillos, ascensores o huecos de escalera). Muebles con Estilo no se hace responsable si el producto
+                    no puede ser entregado por falta de espacio. No realizamos entregas por fachada mediante grúas o
+                    poleas.</p>
+                <p><strong>6. INCIDENCIAS EN EL TRANSPORTE</strong></p>
+                <p>En el momento de la recepción, si observas golpes o roturas en el embalaje, es obligatorio hacerlo
+                    constar en el albarán del transportista firmando como "Bulto dañado" o "Pendiente de revisión".
+                    Dispones de 24 horas para notificarnos cualquier anomalía estética para que el seguro del transporte
+                    se haga cargo.</p>
+            </div>
+        </body>
+    </section>
+</body>
+</html>

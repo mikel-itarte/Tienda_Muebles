@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Tienda online de muebles modernos y elegantes" />
+    <meta name="author" content="" />
+    <title>Muebles con Estilo - Tienda Online</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Iconos de Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Tema CSS principal (incluye Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <!-- Animate.css para animaciones extras -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <style>
+        /* ===== ESTILOS PERSONALIZADOS ===== */
+        /* Ajuste para navbar fijo */
+        body {
+            padding-top: 76px;
+            /* Altura del navbar fijo */
+            padding-left: 400px;
+            /* Separación lateral */
+            padding-right: 400px;
+            /* Separación lateral */
+
+        }
+
+        .contenedor-preguntas {
+            border-color: black;
+            border-style: solid;
+            border-width: 1px;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navegación con fixed-top -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand fw-bold" href="Tiendaconestilo.html">
+                <i class="bi bi-house-door-fill me-2"></i>Muebles con Estilo
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Alternar navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page"
+                            href="Tiendaconestilo.html">Inicio</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Categorías</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="Salon.html">Salón</a></li>
+                            <li><a class="dropdown-item" href="Dormitorio.html">Dormitorio</a></li>
+                            <li><a class="dropdown-item" href="Cocina.html">Cocina</a></li>
+                            <li><a class="dropdown-item" href="Oficina.html">Oficina</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="Ofertas.html">Ofertas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Contacto.html">Contacto</a></li>
+                </ul>
+                <form class="d-flex" action="carrito.html" method="get">
+                    <button class="btn btn-outline-dark" type="submit">
+                        <i class="bi-cart-fill me-1"></i>
+                        Carrito
+                        <span class="badge bg-dark text-white ms-1 rounded-pill" id="cart-count">0</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <section id='Preguntas' class="preguntas-section">
+        <header class="bg-dark py-5"
+            style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1618220179428-22790b461013?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center;">
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="text-center text-white">
+                    <h1 class="display-4 fw-bolder">Preguntas frecuentes</h1>
+                </div>
+            </div>
+        </header>
+
+        <body>
+            <div class="contenedor-preguntas">
+                <p><strong>1. ¿Cuánto tardará en llegar mi pedido?</strong></p>
+                <p>El plazo de entrega estándar es de 7 a 14 días hábiles. Para muebles personalizados o bajo pedido,
+                    el plazo puede variar entre 2 y 4 semanas. Te enviaremos un número de seguimiento en cuanto el
+                    mueble salga de nuestro almacén.</p>
+                <p><strong>2. ¿Suben los muebles a mi domicilio?</strong></p>
+                <p>Nuestros envíos estándar se entregan a pie de calle. Si necesitas que el transportista suba el mueble
+                    a tu planta o lo deje dentro de casa, selecciona el servicio "Entrega Premium" al finalizar tu
+                    compra (sujeto a suplemento).</p>
+                <p><strong>3. ¿Los muebles vienen montados?</strong></p>
+                <p>La mayoría de nuestros productos se envían en formato "Ready to Assemble" (kit de fácil montaje) para
+                    reducir costes de envío y riesgo de daños. Incluyen instrucciones detalladas y todas las piezas
+                    necesarias. Los sofás y butacas suelen enviarse montados a falta de colocar las patas..</p>
+                <p><strong>4. ¿Qué pasa si el mueble llega golpeado?</strong></p>
+                <p>¡No te preocupes! Si notas cualquier daño en el embalaje al recibirlo, anótalo en el albarán del
+                    transportista. Contacta con nosotros en las siguientes 24/48 horas enviando fotos del desperfecto a
+                    [Tu Email] y gestionaremos el cambio de la pieza o del mueble sin coste para ti.</p>
+                <p><strong>5. ¿Puedo devolver un mueble si no me gusta?</strong></p>
+                <p>Sí, tienes 14 días naturales para solicitar la devolución. El mueble debe estar en su embalaje
+                    original y no haber sido montado. Ten en cuenta que, en este caso, los gastos de envío de vuelta
+                    corren por cuenta del cliente.
+                    Sí, tienes 14 días naturales para solicitar la devolución. El mueble debe estar en su embalaje
+                    original
+                    y no haber sido montado. Ten en cuenta que, en este caso, los gastos de envío de vuelta corren por
+                    cuenta del cliente.</p>
+                <p><strong>6. ¿Qué garantía tienen los productos?</strong></p>
+                <p>Todos nuestros muebles tienen una garantía de 3 años contra defectos de fabricación, conforme a la
+                    normativa vigente.</p>
+
+            </div>
+        </body>
+    </section>
+</body>
+</html>

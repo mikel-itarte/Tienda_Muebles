@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Tienda online de muebles modernos y elegantes" />
+    <meta name="author" content="" />
+    <title>Muebles con Estilo - Tienda Online</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Iconos de Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Tema CSS principal (incluye Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <!-- Animate.css para animaciones extras -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        /* ===== ESTILOS PERSONALIZADOS ===== */
+        /* Ajuste para navbar fijo */
+        body {
+            padding-top: 76px; /* Altura del navbar fijo */
+        }
+        
+        /* Animación para tarjetas de productos */
+        .product-card {
+            transition: all 0.3s ease;
+            border: none;
+            overflow: hidden;
+            height: 100%;
+        }
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+        }
+        .product-card img {
+            transition: transform 0.5s ease;
+            height: 200px;
+            object-fit: cover;
+        }
+        .product-card:hover img {
+            transform: scale(1.05);
+        }
+        
+        /* ===== EFECTO PARALLAX ===== */
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 600px;
+            height: 100vh;
+            max-height: 700px;
+            position: relative;
+            overflow: hidden;
+        }
+        .parallax::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 100%);
+            z-index: 1;
+        }
+        .parallax .container {
+            position: relative;
+            z-index: 2;
+            height: 100%;
+        }
+        
+        /* Texto semitransparente */
+        .text-white-75 {
+            color: rgba(255, 255, 255, 0.75);
+        }
+        
+        /* Efecto hover para el botón */
+        .hover-scale:hover {
+            transform: scale(1.05);
+            background-color: rgba(255, 255, 255, 0.1) !important;
+            border-color: white !important;
+        }
+        
+        @media (max-width: 768px) {
+            .parallax {
+                background-attachment: scroll;
+                min-height: 500px;
+            }
+            .display-3 {
+                font-size: 2.5rem;
+            }
+        }
+        
+        /* ===== ESTILOS PARA LA TABLA ===== */
+        .table-comparativa {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        .table-comparativa thead th {
+            background: linear-gradient(135deg, #1e2a3a 0%, #2c3e50 100%);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 15px;
+        }
+        .table-comparativa tbody tr {
+            transition: background-color 0.3s ease;
+        }
+        .table-comparativa tbody tr:hover {
+            background-color: rgba(33, 37, 41, 0.05);
+        }
+        .badge-durabilidad {
+            padding: 8px 12px;
+            border-radius: 30px;
+            font-weight: 500;
+            font-size: 0.85rem;
+        }
+        .precio-indicador {
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+        
+        /* ===== EFECTOS HOVER PARA FOOTER ===== */
+        .hover-white:hover {
+            color: white !important;
+            transition: color 0.2s ease;
+        }
+        footer a:hover i {
+            color: white !important;
+            transform: scale(1.15) rotate(5deg);
+            transition: all 0.3s ease;
+        }
+        footer .input-group button:hover {
+            background-color: white;
+            color: black !important;
+            transform: scale(1.05);
+        }
+        
+        /* Ajustes para las cards de productos */
+        .card-footer {
+            background-color: transparent;
+            border-top: none;
+        }
+        .btn-outline-dark {
+            border-width: 2px;
+        }
+        .badge {
+            font-size: 0.8rem;
+            padding: 0.5rem 0.8rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navegación con fixed-top -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="bi bi-house-door-fill me-2"></i>Muebles con Estilo
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Alternar navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Inicio</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Categorías</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="Salon.html">Salón</a></li>
+                            <li><a class="dropdown-item" href="Dormitorio.html">Dormitorio</a></li>
+                            <li><a class="dropdown-item" href="Cocina.html">Cocina</a></li>
+                            <li><a class="dropdown-item" href="Oficina.html">Oficina</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="Ofertas.html">Ofertas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Contacto.html">Contacto</a></li>
+                </ul>
+                <form class="d-flex" action="carrito.html" method="get">
+                    <button class="btn btn-outline-dark" type="submit">
+                        <i class="bi-cart-fill me-1"></i>
+                        Carrito
+                        <span class="badge bg-dark text-white ms-1 rounded-pill" id="cart-count">0</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HEADER CON EFECTO PARALLAX Y CENTRADO VERTICAL -->
+    <header class="parallax position-relative" style="background-image: url('https://images.unsplash.com/photo-1618220179428-22790b461013?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+        <!-- Overlay -->
+        <div class="position-absolute top-0 start-0 w-100 h-100" 
+             style="background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.3) 100%); z-index: 1;">
+        </div>
+        
+        <div class="container px-4 px-lg-5 h-100 position-relative" style="z-index: 2;">
+            <div class="row h-100 align-items-center justify-content-center text-center">
+                <div class="col-lg-8 col-xl-7">
+                    <!-- Título -->
+                    <h1 class="display-3 fw-bolder text-white mb-4 animate__animated animate__fadeInDown" 
+                        style="text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">
+                        Muebles que <span class="border-bottom border-warning border-3 pb-2">inspiran</span>
+                    </h1>
+                    
+                    <!-- Descripción -->
+                    <p class="lead fw-normal text-white-75 mb-5 animate__animated animate__fadeInUp animate__delay-1s">
+                        <i class="bi bi-quote me-2 opacity-50"></i>
+                        Diseño moderno y calidad para tu hogar
+                        <i class="bi bi-quote ms-2 opacity-50"></i>
+                    </p>
+                    
+                    <!-- Botón -->
+                    <a href="#productos" 
+                       class="btn btn-outline-light btn-lg px-5 py-3 fw-semibold border-2 rounded-pill animate__animated animate__fadeInUp animate__delay-2s hover-scale">
+                        <i class="bi bi-arrow-right-circle me-2"></i>
+                        Descubrir colección
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sección de productos -->
+    <section id="productos" class="py-5">
+        <div class="container px-4 px-lg-5 mt-5">
+            <h2 class="text-center mb-5 display-5 fw-bold">Nuestros productos destacados</h2>
+            <div id="lista-productos" class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center">
+                                <button class="btn btn-outline-dark mt-auto w-100" onclick="addToCart('Armario Ropero', 449.99, 'assets/armario-ropero-con-3-puertas-3-cajones-5-baldas-barra-turin-pitarch.jpg', '3 puertas - Blanco/Roble')">
+                                    <i class="bi bi-cart-plus me-2"></i>Añadir
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </section>
+
+    <!-- SECCIÓN: TABLA COMPARATIVA DE MATERIALES -->
+    <section class="py-5 bg-light">
+        <div class="container px-4 px-lg-5">
+            <h3 class="text-center mb-4 display-6 fw-bold">Comparativa de materiales</h3>
+            <p class="text-center text-muted mb-5">Conoce las características de nuestros materiales y elige el mejor para tu hogar</p>
+            
+            <div class="table-responsive table-comparativa">
+                <table class="table table-hover align-middle mb-0">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="text-center">Material</th>
+                            <th scope="col" class="text-center">Durabilidad</th>
+                            <th scope="col" class="text-center">Precio</th>
+                            <th scope="col" class="text-center">Mantenimiento</th>
+                            <th scope="col" class="text-center">Recomendado para</th>
+                            <th scope="col" class="text-center">Valoración</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="fw-bold"><i class="bi bi-tree-fill me-2 text-success"></i>Madera maciza</td>
+                            <td class="text-center"><span class="badge-durabilidad bg-success text-white">Alta (10+ años)</span></td>
+                            <td class="text-center precio-indicador text-warning">€€€</td>
+                            <td class="text-center"><i class="bi bi-droplet me-1 text-primary"></i> Bajo</td>
+                            <td>Salón, Dormitorio</td>
+                            <td class="text-center">⭐⭐⭐⭐⭐</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold"><i class="bi bi-layers-fill me-2 text-secondary"></i>Tablero laminado</td>
+                            <td class="text-center"><span class="badge-durabilidad bg-warning text-dark">Media (5-8 años)</span></td>
+                            <td class="text-center precio-indicador text-success">€€</td>
+                            <td class="text-center"><i class="bi bi-brush me-1 text-info"></i> Muy bajo</td>
+                            <td>Cocina, Oficina</td>
+                            <td class="text-center">⭐⭐⭐⭐</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold"><i class="bi bi-tools me-2 text-secondary"></i>Acero inoxidable</td>
+                            <td class="text-center"><span class="badge-durabilidad bg-success text-white">Muy alta (15+ años)</span></td>
+                            <td class="text-center precio-indicador text-danger">€€€€</td>
+                            <td class="text-center"><i class="bi bi-droplet me-1 text-primary"></i> Bajo</td>
+                            <td>Cocina, Industrial</td>
+                            <td class="text-center">⭐⭐⭐⭐⭐</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold"><i class="bi bi-gem me-2 text-info"></i>Cristal templado</td>
+                            <td class="text-center"><span class="badge-durabilidad bg-success text-white">Alta (10+ años)</span></td>
+                            <td class="text-center precio-indicador text-warning">€€€</td>
+                            <td class="text-center"><i class="bi bi-brush me-1 text-info"></i> Medio</td>
+                            <td>Mesas, Estanterías</td>
+                            <td class="text-center">⭐⭐⭐⭐</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold"><i class="bi bi-grid-3x3-gap-fill me-2 text-primary"></i>Tapizado tela</td>
+                            <td class="text-center"><span class="badge-durabilidad bg-warning text-dark">Media (5-7 años)</span></td>
+                            <td class="text-center precio-indicador text-success">€€</td>
+                            <td class="text-center"><i class="bi bi-water me-1 text-danger"></i> Alto</td>
+                            <td>Sofás, Sillas</td>
+                            <td class="text-center">⭐⭐⭐</td>
+                        </tr>
+                    </tbody>
+                    <tfoot class="table-light">
+                        <tr>
+                            <td colspan="6" class="text-muted small py-3">
+                                <i class="bi bi-info-circle-fill me-2 text-primary"></i> 
+                                <strong>Leyenda:</strong> € = Económico | €€ = Medio | €€€ = Alto | €€€€ = Premium
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página MEJORADO -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 mb-4 mb-md-0">
+                    <h5 class="text-white mb-3">Muebles con Estilo</h5>
+                    <p class="text-white-50 small">Tu tienda online de muebles modernos y de calidad para todos los espacios de tu hogar. Diseño, confort y las mejores tendencias desde 2010.</p>
+                    <div class="d-flex gap-3 mt-3">
+                        <a href="https://facebook.com" target="_blank" class="text-white-50 text-decoration-none" title="Facebook">
+                            <i class="bi bi-facebook fs-4"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" class="text-white-50 text-decoration-none" title="Instagram">
+                            <i class="bi bi-instagram fs-4"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" class="text-white-50 text-decoration-none" title="Twitter/X">
+                            <i class="bi bi-twitter-x fs-4"></i>
+                        </a>
+                        <a href="https://pinterest.com" target="_blank" class="text-white-50 text-decoration-none" title="Pinterest">
+                            <i class="bi bi-pinterest fs-4"></i>
+                        </a>
+                        <a href="https://youtube.com" target="_blank" class="text-white-50 text-decoration-none" title="YouTube">
+                            <i class="bi bi-youtube fs-4"></i>
+                        </a>
+                        <a href="https://tiktok.com" target="_blank" class="text-white-50 text-decoration-none" title="TikTok">
+                            <i class="bi bi-tiktok fs-4"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <h5 class="text-white mb-3">Enlaces rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="Sobrenosotros.html" class="text-white-50 text-decoration-none hover-white"><i class="bi bi-chevron-right me-1 small"></i>Sobre nosotros</a></li>
+                        <li class="mb-2"><a href="Envios.html" class="text-white-50 text-decoration-none hover-white"><i class="bi bi-chevron-right me-1 small"></i>Política de envíos</a></li>
+                        <li class="mb-2"><a href="Devoluciones.html" class="text-white-50 text-decoration-none hover-white"><i class="bi bi-chevron-right me-1 small"></i>Devoluciones</a></li>
+                        <li class="mb-2"><a href="Preguntas.html" class="text-white-50 text-decoration-none hover-white"><i class="bi bi-chevron-right me-1 small"></i>Preguntas frecuentes</a></li>
+                        <li class="mb-2"><a href="Trabajo.html" class="text-white-50 text-decoration-none hover-white"><i class="bi bi-chevron-right me-1 small"></i>Trabaja con nosotros</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-4">
+                    <h5 class="text-white mb-3">Contacto</h5>
+                    <ul class="list-unstyled text-white-50 small">
+                        <li class="mb-2"><i class="bi bi-geo-alt-fill me-2 text-primary"></i> Calle Bravo Murillo, 25 - Madrid</li>
+                        <li class="mb-2"><i class="bi bi-telephone-fill me-2 text-primary"></i> +34 912 345 678</li>
+                        <li class="mb-2"><i class="bi bi-envelope-fill me-2 text-primary"></i> info@mueblesconestilo.com</li>
+                        <li class="mb-2"><i class="bi bi-clock-fill me-2 text-primary"></i> Lun-Vie: 9:00 - 20:00</li>
+                    </ul>
+                    <div class="mt-3">
+                        <p class="text-white-50 small mb-2">Suscríbete a nuestra newsletter</p>
+                        <div class="input-group">
+                            <input type="email" class="form-control form-control-sm" placeholder="Introduce tu email">
+                            <button class="btn btn-outline-light btn-sm" type="button">→</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="my-4 bg-secondary">
+            
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="small text-white-50 mb-0">
+                        <i class="bi bi-c-circle me-1"></i> Copyright 2024-2025 Muebles con Estilo. Todos los derechos reservados.
+                    </p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="AvisoLegal.html" class="text-white-50 text-decoration-none small me-3 hover-white">Aviso legal</a>
+                    <a href="cookies.html" class="text-white-50 text-decoration-none small me-3 hover-white">Política de cookies</a>
+                    <a href="Priva.html" class="text-white-50 text-decoration-none small hover-white">Privacidad</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+<script>
+    // Función para añadir productos al carrito
+    function addToCart(nombre, precio, imagen, descripcion = '') {
+     if (!carritoMuebles) {
+        alert("Los productos todavía se están cargando");
+        return;
+    }
+
+    let idProducto = buscarIdProducto(nombre);
+
+    if (idProducto === null) {
+        alert("No existe el producto");
+        return;
+    }
+
+    let cantidadActual = carritoMuebles.cantidad[idProducto] || 0;
+
+    carritoMuebles.actualizarCantidad(idProducto, cantidadActual + 1);
+
+    localStorage.setItem("carrito", JSON.stringify(carritoMuebles.obtenerCarrito().productos));
+
+    actualizarContadorGlobal();
+
+    console.log(carritoMuebles.obtenerCarrito());
+    }
+
+    // Función para actualizar el contador del carrito
+    function actualizarContadorGlobal() {
+        const productos = JSON.parse(localStorage.getItem("carrito")) || [];
+        let totalCantidad = 0;
+
+    for (let i = 0; i < productos.length; i++) {
+        totalCantidad += productos[i].cantidad;
+    }
+
+    document.getElementById("cart-count").textContent = totalCantidad;
+    }
+
+    // Inicializar contador al cargar la página
+    document.addEventListener('DOMContentLoaded', function() {
+        actualizarContadorGlobal();
+        
+        // Verificar que el localStorage funciona
+        console.log('Carrito iniciado correctamente');
+    });
+
+    // Función de depuración para ver el contenido del carrito (opcional)
+    function verCarrito() {
+        const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+        console.log('Contenido del carrito:', carrito);
+        alert('El carrito tiene ' + carrito.reduce((sum, item) => sum + item.cantidad, 0) + ' productos');
+    }
+</script>
+         <script src="js/scripts.js"></script>
+
+</body>
+</html>

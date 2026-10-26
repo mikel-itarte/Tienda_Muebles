@@ -84,7 +84,7 @@ class Carrito{
 
     let carritoMuebles;
 
-    fetch("./productos.json")
+    fetch("https://api.npoint.io/f1efe090797b612226ee")
     .then(function(respuesta) {
         return respuesta.json();
     })
